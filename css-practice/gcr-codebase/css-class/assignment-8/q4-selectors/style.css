@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eceff4;
+  color: #1e293b;
+}
+
+header,
+footer {
+  padding: 22px;
+  text-align: center;
+  background: #2f3e52;
+  color: #fff;
+}
+
+main {
+  max-width: 780px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.panel {
+  padding: 26px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Element selector: spacing for every paragraph */
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Class selector: yellow highlight */
+.note {
+  padding: 10px;
+  background: #fff3c4;
+}
+
+/* ID selector: one unique emphasised paragraph */
+#key-point {
+  color: #b4143c;
+  font-weight: 700;
+}
+
+/* Attribute selector: only text inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #64748b;
+  border-radius: 7px;
+}
+
+/* Descendant selector: any p inside .group */
+.group p {
+  color: #1d4ed8;
+}
+
+/* Child selector: ul that is a direct child of .group */
+.group > ul {
+  padding: 18px 18px 18px 36px;
+  border: 2px dashed #15803d;
+}
+
+/* Adjacent sibling: the p immediately after the ul */
+.group ul + p {
+  font-weight: 700;
+}
+
+/* General sibling: every p after the ul */
+.group ul ~ p {
+  background: #dcfce7;
+}
+
+/* Attribute selector on links */
+a[href="#"] {
+  display: inline-block;
+  margin-top: 14px;
+  color: #6d28d9;
+}

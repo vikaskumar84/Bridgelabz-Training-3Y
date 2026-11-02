@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Sizing Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Box Sizing Comparison</h1>
+  </header>
+  <main class="pair">
+    <section class="box default-box">
+      <h2>content-box (default)</h2>
+      <p>The 300px width covers only the content. Padding and border are added on top, so the box ends up wider than 300px.</p>
+    </section>
+    <section class="box border-sized">
+      <h2>border-box</h2>
+      <p>The 300px width already includes padding and border, so the box stays exactly 300px wide.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Both boxes use the same width, padding and border.</p>
+  </footer>
+</body>
+</html>

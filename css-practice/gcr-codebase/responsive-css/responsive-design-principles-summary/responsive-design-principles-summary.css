@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fff1f2;
+  color: #4c0519;
+}
+header {
+  text-align: center;
+  padding: 25px;
+  background: #be123c;
+  color: white;
+}
+.ideas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px;
+}
+.ideas article {
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+.ideas article:hover {
+  background: linear-gradient(135deg, #be123c, #7c3aed);
+  color: white;
+  transform: translateY(-6px);
+}
+code {
+  display: block;
+  margin-top: 18px;
+  background: #ffe4e6;
+  padding: 12px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .ideas {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+}

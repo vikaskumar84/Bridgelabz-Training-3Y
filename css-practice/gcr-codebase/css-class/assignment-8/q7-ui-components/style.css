@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #d9e8ff, #fbe3f1);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(100%, 420px);
+  padding: 30px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.panel h1 {
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.panel input,
+.panel select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+}
+
+.panel input:focus,
+.panel select:focus {
+  border-color: #2563eb;
+  outline: 3px solid #bfd6ff;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.go {
+  background: #2563eb;
+}
+
+.go:hover {
+  background: #1d4ed8;
+}
+
+.clear {
+  background: #667085;
+}
+
+.clear:hover {
+  background: #475467;
+}
+
+.buttons button:active {
+  transform: scale(0.97);
+}

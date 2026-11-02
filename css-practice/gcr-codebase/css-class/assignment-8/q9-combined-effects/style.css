@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f1ff;
+  color: #1f2937;
+}
+
+header,
+footer {
+  padding: 22px;
+  text-align: center;
+  background: #55209f;
+  color: #fff;
+}
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 60vh;
+  padding: 30px;
+}
+
+.fx {
+  padding: 18px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.fx-button {
+  color: #fff;
+  background: #7a3be0;
+  border: none;
+  cursor: pointer;
+}
+
+.fx-link {
+  color: #8a4b08;
+  background: #fff0c2;
+}
+
+.fx-card {
+  color: #1e3a8a;
+  background: #dbe7ff;
+}
+
+.fx:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.fx-button:hover {
+  background: #5d22bd;
+}
+
+.fx-link:hover {
+  background: #ffe08a;
+}
+
+.fx-card:hover {
+  background: #bcd1ff;
+}
+
+.fx-button:focus {
+  outline: 4px solid #f9b115;
+  outline-offset: 2px;
+}

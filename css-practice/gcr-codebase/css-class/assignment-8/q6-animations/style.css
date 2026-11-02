@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #e9fbff;
+  color: #134e63;
+}
+
+header,
+footer {
+  padding: 22px;
+  text-align: center;
+  background: #0e5a73;
+  color: #fff;
+}
+
+.arena {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.slider {
+  display: grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;
+  color: #fff;
+  background: #2563eb;
+  border-radius: 12px;
+  animation: slide 3s ease-in-out 0.5s infinite alternate;
+}
+
+.bouncer {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  color: #fff;
+  background: #f97316;
+  border-radius: 50%;
+  animation-name: bounce;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.rainbow {
+  animation: recolor 4s ease-in-out 0.2s infinite;
+}
+
+@keyframes slide {
+  from { transform: translateX(-130px); }
+  to   { transform: translateX(130px); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(-28px); }
+  to   { transform: translateY(28px); }
+}
+
+@keyframes recolor {
+  0%   { color: #dc2626; }
+  50%  { color: #16a34a; }
+  100% { color: #7c3aed; }
+}
