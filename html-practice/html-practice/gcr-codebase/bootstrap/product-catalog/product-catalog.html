@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopEasy - Product Catalog</title>
+    <!-- Bootstrap 5 CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="product-catalog.css" />
+  </head>
+  <body>
+    <header class="py-4 bg-dark text-white">
+      <div class="container">
+        <h1>ShopEasy</h1>
+        <p class="mb-0">Everyday gear at honest prices.</p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <!-- col-12: 1 column on phones, col-sm-6: 2 on tablets, col-md-3: 4 on desktops -->
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm product-card">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Wireless Headphones"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5">Wireless Headphones</h2>
+              <p class="fw-bold">$59</p>
+              <button type="button" class="btn btn-primary mt-auto">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm product-card">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Smart Watch"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5">Smart Watch</h2>
+              <p class="fw-bold">$89</p>
+              <button type="button" class="btn btn-primary mt-auto">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm product-card">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Running Shoes"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5">Running Shoes</h2>
+              <p class="fw-bold">$75</p>
+              <button type="button" class="btn btn-primary mt-auto">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm product-card">
+            <img
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Travel Backpack"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5">Travel Backpack</h2>
+              <p class="fw-bold">$45</p>
+              <button type="button" class="btn btn-primary mt-auto">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-light text-center p-4">
+      <p class="mb-0">&copy; 2026 ShopEasy</p>
+    </footer>
+  </body>
+</html>

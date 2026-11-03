@@ -1,0 +1,39 @@
+:root {
+  /* Theme variables that override Bootstrap's defaults */
+  --bs-primary: #6f42c1;
+  --bs-primary-rgb: 111, 66, 193;
+  --bs-font-sans-serif: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background: #faf7ff;
+}
+
+.theme-header {
+  background: #efe5ff;
+  color: #3d216b;
+}
+
+h1,
+h2 {
+  color: #4a2a85;
+}
+
+.btn-primary {
+  --bs-btn-bg: #6f42c1;
+  --bs-btn-border-color: #6f42c1;
+  --bs-btn-hover-bg: #5a32a3;
+  --bs-btn-hover-border-color: #5a32a3;
+  --bs-btn-active-bg: #4c2a8a;
+  --bs-btn-active-border-color: #4c2a8a;
+}
+
+.card {
+  border-color: #e3d6f7;
+}
+
+.card-img-top {
+  height: 240px;
+  object-fit: cover;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Tracker</title>
+    <!-- Bootstrap 5 CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="task-tracker-with-badges.css" />
+  </head>
+  <body>
+    <header class="container pt-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Task Tracker</h1>
+        <!-- badge shows the pending count; fs-6 makes the text a bit larger -->
+        <span class="badge text-bg-primary fs-6">Pending: 4</span>
+      </div>
+    </header>
+
+    <main class="container pb-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <!-- list-group-item + flex utilities put the badge on the right -->
+          <ul class="list-group mb-4">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Finish homepage layout
+              <span class="badge text-bg-danger rounded-pill">High</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Review assignment notes
+              <span class="badge text-bg-warning rounded-pill">Medium</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Update profile page
+              <span class="badge text-bg-success rounded-pill">Low</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Practice Java loops
+              <span class="badge text-bg-danger rounded-pill">High</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-success">
+            Completed <span class="badge text-bg-light text-dark">3</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

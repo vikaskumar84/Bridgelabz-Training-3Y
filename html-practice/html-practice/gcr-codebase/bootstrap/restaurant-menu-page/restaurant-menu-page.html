@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spice Garden - Today's Menu</title>
+    <!-- Bootstrap 5 CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="restaurant-menu-page.css" />
+  </head>
+  <body>
+    <header class="text-center py-5 bg-dark text-white">
+      <div class="container">
+        <h1>Spice Garden</h1>
+        <p class="lead mb-0">Today's Menu</p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <section class="text-center mb-5">
+        <figure>
+          <img
+            class="img-fluid rounded-4 food-photo"
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+            alt="Plate of freshly cooked food"
+          />
+          <figcaption class="mt-2 text-muted">Cooked fresh every morning with whole spices.</figcaption>
+        </figure>
+      </section>
+
+      <div class="row g-4">
+        <section class="col-lg-8">
+          <!-- table-striped: zebra rows, table-hover: highlight row under the cursor -->
+          <table class="table table-striped table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Paneer Tikka</td>
+                <td>Starter</td>
+                <td>&#8377;220</td>
+              </tr>
+              <tr>
+                <td>Butter Chicken</td>
+                <td>Main Course</td>
+                <td>&#8377;320</td>
+              </tr>
+              <tr>
+                <td>Veg Biryani</td>
+                <td>Main Course</td>
+                <td>&#8377;240</td>
+              </tr>
+              <tr>
+                <td>Gulab Jamun</td>
+                <td>Dessert</td>
+                <td>&#8377;100</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <aside class="col-lg-4">
+          <h2 class="h3 text-center">Chef's Specials</h2>
+          <!-- list-group styles a plain list as a bordered group -->
+          <ul class="list-group">
+            <li class="list-group-item">Tandoori Platter</li>
+            <li class="list-group-item">Malai Kofta</li>
+            <li class="list-group-item">Chocolate Brownie</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-4">
+      <p class="mb-0">Open daily: 11 AM - 11 PM</p>
+    </footer>
+  </body>
+</html>

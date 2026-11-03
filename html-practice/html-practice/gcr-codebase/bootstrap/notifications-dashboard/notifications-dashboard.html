@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notifications Dashboard</title>
+    <!-- Bootstrap 5 CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="notifications-dashboard.css" />
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Notifications</h1>
+        <span class="badge text-bg-primary">Dashboard</span>
+      </div>
+
+      <!-- card groups all alerts in one neat panel -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <!-- alert-success / alert-info / alert-danger set the contextual colour -->
+          <div class="alert alert-success" role="alert">You have a new message from the support team.</div>
+          <div class="alert alert-info" role="alert">Tip: add a profile photo to complete your account.</div>
+          <div class="alert alert-danger" role="alert">Warning: your password expires in 3 days.</div>
+
+          <!-- alert-dismissible + btn-close lets the user close this alert -->
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            This reminder can be dismissed.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <!-- "Well": a light, bordered, padded box -->
+          <section class="p-4 bg-light border rounded summary-well">
+            <h2 class="h5">Summary</h2>
+            <p class="mb-0">You have 4 notifications today.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- Bootstrap JS bundle: needed for navbar toggle, alerts and carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

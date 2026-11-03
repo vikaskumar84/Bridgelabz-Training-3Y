@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <h1>Dev Singh Chauhan</h1>
+    <p>Web Developer</p>
+
+    <nav>
+      <a href="#about">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+      <h2>About Me</h2>
+      <img src="profile.jpg" alt="Profile Photo">
+      <p>Hello! I am <b>Dev Singh Chauhan</b>. I am a <i>Web Developer</i> interested in building modern web applications.</p>
+      <p>My favorite technology is <mark>Node.js</mark>.</p>
+   
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>PostgreSQL </li>
+      </ul>
+  
+      <h2>My Projects</h2>
+      <article>
+        <h3>Attendance Management System</h3>
+        <p>Role-based attendance management system for educational institutions — built with React, Node.js, Prisma, PostgreSQL & Clerk</p>
+        <a href="https://github.com/ChauhanDev07/AttendanceManagement">View Project</a>
+      </article>
+
+
+
+      <h2>Education</h2>
+      <ol>
+        <li>B.Tech - Computer Science</li>
+        <li>Higher Secondary Education</li>
+        <li>Secondary Education</li>
+      </ol>
+   
+      <h2>Experience</h2>
+      <p>I have experience in <b>MERN Stack Development</b> and frontend development.</p>
+      <p>I enjoy creating responsive and user-friendly web applications.</p>
+
+    <aside>
+      <h3>Quick Links</h3>
+      <p>You can find my work on:</p>
+      <a href="https://github.com/ChauhanDev07">GitHub</a><br>
+      
+    </aside>
+
+      <h2>Contact Me</h2>
+      <p>Email: <b>mail@Devchauhan.com/b></p>
+      <p>Phone: <b>9219444788</b></p>
+      <p>Location: Mathura, India</p>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Dev Chauhan All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
