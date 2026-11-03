@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Form Builder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 520px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 16px;
+        padding: 10px 16px;
+      }
+      pre {
+        background: #f3f3f3;
+        padding: 12px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dynamic Form Builder</h1>
+    <div id="formContainer"></div>
+    <pre id="output" aria-live="polite"></pre>
+    <script>
+      class FormBuilder {
+        constructor(fields, holder) {
+          this.fields = fields;
+          this.container = holder;
+        }
+        render() {
+          const formEl = document.createElement('form');
+          formEl.id = 'dynamicForm';
+          this.fields.forEach((control, pos) => {
+            const caption = document.createElement('label');
+            caption.htmlFor = `field-${pos}`;
+            caption.textContent = control.label;
+            const inputEl = document.createElement(
+              control.type === 'textarea' ? 'textarea' : 'input',
+            );
+            if (control.type !== 'textarea') inputEl.type = control.type;
+            inputEl.id = `field-${pos}`;
+            inputEl.name = control.name;
+            inputEl.required = Boolean(control.required);
+            formEl.append(caption, inputEl);
+          });
+          const btn = document.createElement('button');
+          btn.type = 'submit';
+          btn.textContent = 'Submit';
+          formEl.appendChild(btn);
+          formEl.addEventListener('submit', (evt) => {
+            evt.preventDefault();
+            document.getElementById('output').textContent = JSON.stringify(
+              this.getFormData(),
+              null,
+              2,
+            );
+          });
+          this.container.replaceChildren(formEl);
+        }
+        getFormData() {
+          const payload = new FormData(this.container.querySelector('form'));
+          return Object.fromEntries(payload.entries());
+        }
+      }
+      const controls = [
+        {
+          type: 'text',
+          label: 'Username',
+          name: 'username',
+          required: true,
+        },
+        {
+          type: 'email',
+          label: 'Email',
+          name: 'email',
+          required: true,
+        },
+        {
+          type: 'password',
+          label: 'Password',
+          name: 'password',
+          required: true,
+        },
+      ];
+      new FormBuilder(controls, document.getElementById('formContainer')).render();
+    </script>
+  </body>
+</html>

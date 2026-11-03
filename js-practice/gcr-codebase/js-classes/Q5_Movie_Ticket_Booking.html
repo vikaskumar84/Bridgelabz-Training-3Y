@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Ticket Booking</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 520px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px;
+      }
+      button {
+        margin-top: 16px;
+        padding: 10px 16px;
+      }
+      .error {
+        color: red;
+      }
+      #ticket {
+        margin-top: 18px;
+        padding: 12px;
+        background: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Movie Ticket Booking</h1>
+    <form id="bookingForm" novalidate>
+      <label for="name">Name</label><input id="name" required />
+      <label for="email">Email</label><input id="email" type="email" required />
+      <label for="seats">Seats (1–10)</label
+      ><input id="seats" type="number" min="1" max="10" step="1" required />
+      <button type="submit">Book Ticket</button>
+    </form>
+    <p id="message" class="error" aria-live="polite"></p>
+    <div id="ticket"></div>
+    <script>
+      document.getElementById('bookingForm').addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        const fullName = document.getElementById('name').value.trim();
+        const mailAddr = document.getElementById('email').value.trim();
+        const chairsText = document.getElementById('seats').value;
+        const chairs = Number(chairsText);
+        const nameValid = /^[A-Za-z ]+$/.test(fullName);
+        const mailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mailAddr);
+        const chairsOk = Number.isInteger(chairs) && chairs >= 1 && chairs <= 10;
+        const problems = [];
+        if (!nameValid) problems.push('Name must contain alphabets and spaces only.');
+        if (!mailOk) problems.push('Enter a valid email address.');
+        if (!chairsOk) problems.push('Seats must be a whole number from 1 to 10.');
+        document.getElementById('message').textContent = problems.join(' ');
+        const pass = document.getElementById('ticket');
+        if (problems.length) {
+          pass.textContent = '';
+          return;
+        }
+        const reservation = {
+          name: fullName,
+          email: mailAddr,
+          seats: chairs,
+        };
+        pass.textContent = `Booking confirmed! Name: ${reservation.name} | Email: ${reservation.email} | Seats: ${reservation.seats}`;
+      });
+    </script>
+  </body>
+</html>
